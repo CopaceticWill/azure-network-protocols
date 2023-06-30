@@ -36,7 +36,16 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In this step, I created sample file shares with various permissions
+  
+  - Connect/log into DC-1 as your domain admin account (mydomain.com\user_admin)
+  - Connect/log into Client-1 as a normal user (mydomain\<someuser>)
+  - On DC-1, on the C:\ drive, create 4 folders: “read-access”, “write-access”, “no-access”, “accounting”
+  - Set the following permissions (share the folder) for the “Domain Users” group:
+  - Folder: “read-access”, Group: “Domain Users”, Permission: “Read”
+  - Folder: “write-access”,  Group: “Domain Users”, Permissions: “Read/Write”
+  - Folder: “no-access”, Group: “Domain Admins”, “Permissions: “Read/Write”
+
 </p>
 <br />
 
@@ -44,7 +53,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In this step, I created an “ACCOUNTANTS” Security Group, assign permissions, and test access
+  
+  - Back to DC-1, in Active Directory, and create a security group called “ACCOUNTANTS”
+  - On the “accounting” folder I created earlier, I set the following permissions:
+      - Folder: “accounting”, Group: “ACCOUNTANTS”, Permissions: “Read/Write”
+  - On Client-1, as  <someuser>, I tried to access the accountant's folder. It failed. 
+  - I logged out of Client-1 as  <someuser>
+  - On DC-1, I make <someuser> a member of the “ACCOUNTANTS”  Security Group
+  - I signed back into Client-1 as <someuser> and tried to access the “accounting” share in \\DC-1\ as <someuser> and access is now granted
+                                                                                                      
 </p>
 <br />
 
