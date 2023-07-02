@@ -33,7 +33,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>Actions and Observations</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/CopaceticWill/azure-network-protocols/assets/137100082/d02e909f-6177-43b3-b681-f39d888dc912)
 </p>
 <p>
 In this step, I created sample file shares with various permissions
@@ -50,7 +51,8 @@ In this step, I created sample file shares with various permissions
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![image](https://github.com/CopaceticWill/azure-network-protocols/assets/137100082/8a72cd75-1923-419a-8776-90525193f5ab)
 </p>
 <p>
 In this step, I created an “ACCOUNTANTS” Security Group, assign permissions, and test access
@@ -66,10 +68,3 @@ In this step, I created an “ACCOUNTANTS” Security Group, assign permissions,
 </p>
 <br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
